@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample1
+  labels:
+    app: sample1
+spec: 
+  type: NodePort
+  ports:
+  - port: 8080
+  selector:
+    app: sample1
+    tier: backend
